@@ -1,0 +1,36 @@
+.container {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-height: 300px; /* Limit height for scroll */
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.list li:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #e0e7ff; /* Highlight selected stock */
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

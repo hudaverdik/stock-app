@@ -1,0 +1,21 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Stock {
+  id          Int      @id @default(autoincrement())
+  symbol      String   @unique
+  name        String
+  market      String?
+  industry    String?
+  country     String?
+  lastUpdated DateTime @default(now()) @map("last_updated")
+  active      Boolean  @default(true)
+}
